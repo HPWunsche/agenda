@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet"> 
+
+    
+
+</head>
+
+<body>
+
+        <main>
+            
+            <section class="container">
+
+                <div class="agenda-header">
+
+                    <div class="agenda-logo">
+                        <i class="material-icons" style="font-size:80px; color: rgb(173, 50, 70);">date_range</i>
+                        <h1>Agenda</h1> 
+                    </div>
+                    
+                    <div class="agenda-date">
+                        <label for="now">Aujourd'hui</label>
+                        <input type="date" max="2020-12-31" min="2020-12-1" name="the_date" id="the_date">
+                    
+                        <i class="material-icons" style="margin-top: 15px;">arrow_back</i>
+                        <i class="material-icons">arrow_forward</i>
+                    
+                        <label for="month">Mois</label>
+                        <input type="month" min="2020-03" value="2020-12" name="month" id="month">
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Affichage</button>
+                    <div class="dropdown-content">
+                      <a href="#">Semaine</a>
+                      <a href="#">Jour</a>
+                      <a href="#">Mois</a>
+                      <a href="">Année</a>
+                      <a href="">Planning hebdomadaire</a>
+                      <a href="">4 jours</a>
+                      <a href="">Afficher les week-ends</a>
+                      <a href="">Afficher les événements supprimés</a>
+                    </div>
+                  </div>
+
+<!-- AGENDA -->
+
+                <section class="agenda-content">
+
+                    <div class="calendar">
+
+                        <h2 id="calendar-title">Calendrier</h2>
+
+                        <div class="month">      
+                            <ul>
+                                <li class="prev">&#10094;</li>
+                                <li class="next">&#10095;</li>
+                                <li>Décembre<br><span style="font-size:18px">2020</span></li>   
+                            </ul>
+                        </div>
+        
+                        <div class="days">
+                            <a href="#"><p>30</p></a>
+                            <a href="#"><p>1</p></a>
+                            <a href="#"><p>2</p></a>
+                            <a href="#"><p>3</p></a>
+                            <a href="#"><p>4</p></a>
+                            <a href="#"><p>5</p></a>
+                            <a href="#"><p>6</p></a>
+                            <a href="formulaire.html"><p>7</p></a>
+                            <a href="#"><p>8</p></a>
+                            <a href="#"><p>9</p></a>
+                            <a href="#"><p>10</p></a>
+                            <a href="#"><p>11</p></a>
+                            <a href="#"><p>12</p></a>
+                            <a href="#"><p>13</p></a>
+                            <a href="#"><p>14</p></a>
+                            <a href="#"><p>15</p></a>
+                            <a href="#"><p>16</p></a>
+                            <a href="#"><p>17</p></a>
+                            <a href="#"><p>18</p></a>
+                            <a href="#"><p>19</p></a>
+                            <a href="#"><p>20</p></a>
+                            <a href="#"><p>21</p></a>
+                            <a href="#"><p>22</p></a>
+                            <a href="#"><p>23</p></a>
+                            <a href="#"><p>24</p></a>
+                            <a href="#"><p>25</p></a>
+                            <a href="#"><p>26</p></a>
+                            <a href="#"><p>27</p></a>
+                            <a href="#"><p>28</p></a>
+                            <a href="#"><p>29</p></a>
+                            <a href="#"><p>30</p></a>
+                            <a href="#"><p>31</p></a>
+                            <a href="#"><p>1</p></a>
+                            <a href="#"><p>2</p></a>
+                            <a href="#"><p>3</p></a>
+                        </div>
+                    </div>
+
+    <!-- Partie centrale : Agenda : Planning, récapitulatif des événements -->
+
+                    <article class="agenda">
+
+        <!-- Planning : exemple pour une semaine, à faire varier en fonction du bouton dropdown Affichage -->
+                    <div class="planning">
+
+                        <div class="planning-header">
+                            <figure id="planning-photo">
+                                <img src="https://jardinage.lemonde.fr/images/dossiers/2020-03/tulipes-135820.jpg" alt="bouquet de tulipes rouges">
+                            </figure>
+                            <h2>Planning</h2>
+                        </div>
+
+                        <table class="planning-table" style="margin-top: 5%;">
+                            <thead>
+                                <tr>
+                                    <th>Horaires</th>
+                                    <th>Lundi 7</th>
+                                    <th>Mardi 8</th>
+                                    <th>Mercredi 9</th>
+                                    <th>Jeudi 10</th>
+                                    <th>Vendredi 11</th>
+                                    <th>Samedi 12</th>
+                                    <th>Dimanche 13</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th>8h-9h</th>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                    <td><a href="#"></a></td>
+                                </tr>
+
+                                <tr>
+                                    <th>9h-10h</th>
+                                    <td id="formation">La Plateforme Marseille, Coworking 1 : Classes PHP/POO</td>
+                                    <td id="formation">Codage : Travail sur mes projets HTML/CSS : IDE, App favorites, Portfolio, Agenda</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td><a href="formulaire.html"></a></td>
+                                    <td><a href="formulaire.html"></a></td>
+                                </tr>
+
+                                <tr>
+                                    <th>10h-11h</th>
+                                    <td id="formation">La Plateforme Marseille, distance : Classes PHP/POO</td>
+                                    <td id="formation">La Plateforme Marseille, Coworking 1 : Check up Classes/PHP</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="job-event">Le Live du Grand Bain, Marseille (événement LinkedIn) : salon en ligne de start-ups du numérique</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>11h-12h</th>
+                                    <td id="travail-perso">Recherche web sur PHP : ressources sur classes : PHP Manual, developpez.com, Pierre Giraud</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="job-event">Le Live du Grand Bain, Marseille (événement LinkedIn) : salon en ligne de start-ups du numérique</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>12h-13h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>13h-14h</th>
+                                    <td id="job-event">Seekube : webinaire : Programme Entrepreneurs d'intérêt général : La transformation numérique au coeur des administrations</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>14h-15h</th>
+                                    <td id="job-event">Seekube : webinaire : Programme Entrepreneurs d'intérêt général : rangement de mes notes et screenshots</td>
+                                    <td id="job-event">Seekube : les métiers tech au Ministre des Affaires étrangères : notes et screenshots</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>15h-16h</th>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="job-event">Seekube : groupement et sauvegarde de mes notes et screenshots</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>16h-17h</th>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td id="travail-perso">Travail sur mes projets HTML/CSS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>17h-18h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>18h-19h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>19h-20h</th>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>20h-21h</th>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td id="mooc">Tutoriels vidéo, travail sur mes projets web HTML/CSS</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>21h-22h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>22h-23h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th>23h-0h</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+            <!-- Partie : Récapitulatif des événements : position sur même colonne que planning -->
+
+                    <div class="recap-events">
+                        <h3>Récapitulatif des événements</h3>
+
+                        <table class="recap-events-table">
+                            <thead>
+                                <tr>
+                                    <th id="date" style="text-align: center;">Date</th>
+                                    <th id="hour" style="text-align: center;">Heure</th>
+                                    <th id="event" style="text-align: center;">Evénement</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr id="formation">
+                                    <td id="date">Lundi 7 décembre</td>
+                                    <td id="hour">9h-10h</td>
+                                    <td id="event">La Plateforme Marseille, Coworking 1 : PHP : les classes</td>
+                                </tr>
+                                <tr id="formation">
+                                    <td id="date">Lundi 7 décembre</td>
+                                    <td id="hour">11h-12h</td>
+                                    <td id="event">La Plateforme Marseille, distance : PHP : les classes</td>
+                                </tr>
+                                <tr id="job-event">
+                                    <td id="date">Lundi 7 décembre</td>
+                                    <td id="hour">13h30-14h30</td>
+                                    <td id="event">Seekube : webinaire : les entrepreneurs d'intérêt général : <br> la transformation numérique au coeur des administrations</td>
+                                </tr>
+
+                                <tr id="formation">
+                                    <td id="date">Mardi 8 décembre</td>
+                                    <td id="hour">10h-11h</td>
+                                    <td id="event">La Plateforme Marseille, Coworking 1 : PHP/Les classes, check up</td>
+                                </tr>
+
+                                <tr id="job-event">
+                                    <td id="date">Mardi 8 décembre</td>
+                                    <td id="hour">14h30-15h30</td>
+                                    <td id="event">Seekube : les métiers tech au Ministère des Affaires étrangères</td>
+                                </tr>
+
+                                <tr id="job-event">
+                                    <td id="date">Vendredi 11 décembre</td>
+                                    <td id="hour">10h-12h</td>
+                                    <td id="event">Le Live du Grand Bain (événement LinkedIn : salon en ligne de start-ups du numérique</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </article>
+
+            <!-- Partie Notes -->
+
+                    <div class="notes">
+                        <h3>Notes</h3>
+
+                        <div class="notes-icons">
+                            <!-- Icon pour une note importante -->
+                            <a href="#"><i class="material-icons" style="font-size: 30px; color: rgb(248, 105, 129); margin-top: 15px;">lightbulb_outline</i></a>
+                            <!-- Icon pour l'ajout d'une simple note (page à créer) -->
+                            <a href="#"><i class="material-icons" style="font-size: 30px; color: rgb(248, 105, 129);">note_add</i></a>
+                            <!-- Icon pour un nouvel événement : lien vers formulaire.html -->
+                            <a href="formulaire.html"><i class="material-icons" id="new-event-icon" style="font-size: 30px; color: rgb(248, 105, 129);">create</i></a>
+                            <!-- Icon pour créer un nouveau contact (page à créer) -->
+                            <a href="#"><i class="material-icons" style="font-size: 30px; color:  rgb(248, 105, 129)">contacts</i></a>
+                            <!-- Icon pour ajouter nouveaux éléments ou composants à l'agenda  -->
+                            <a href="#"><i class="material-icons" style="font-size: 30px; color: rgb(248, 105, 129);">add</i></a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+            
+        </main>
+
+        <footer>
+            <p>Hélène WÜNSCHENDORFF, 2020.</p>
+        </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">                
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+</head>
+
+<body>
+    
+    <main class="new-event">
+
+        <div class="new-event-header">
+            <h1 style="padding-top: 60px;">Nouvel événement</h1>
+        </div>
+
+        <form action="form.php">
+
+            <div class="new-event-buttons">
+
+                <figure id="primavera">
+                    <img src="https://www.meillandrichardier.com/media/page/resized/page/paragraphes/photos/6/7/587x0/cropped-6799-p1i1.jpg" alt="primevère">
+                </figure>
+            
+                <div class="button-record">
+                    <button id="btn-record" type="submit" name="button">
+                        <img src="css/iconfinder_save_2639912.png" alt="enregistrer" width="40" height="40" />
+                        <p>Enregistrer</p>
+                    </button>
+                </div>
+
+<!-- Désolé pour le renvoi vers une page blanche : comment engager l'action enregistrer ? Même question pour les actions annuler et supprimer.
+ -->
+
+                <div class="btn-delete">
+                    <button id="btn-delete" type="reset">
+                        <img src="css/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588_32.png" alt="supprimer">
+                        <p>Supprimer</p>
+                    </button>
+                </div>    
+            </div>
+    
+            <div class="title">
+                <i class="material-icons" style="font-size: 30px; color: rgb(248, 105, 129);">note_add</i>
+                <label for="title">Titre</label>
+                <input type="text" name="text" id="text">
+            </div>
+
+            <div class="event">
+                <i class="material-icons">event</i>
+                <label for="event">Evénement</label>
+                <select name="event" id="event">
+                    <option value="event">Petit-déjeuner</option>
+                    <option value="event">Brunch</option>
+                    <option value="event">Déjeuner</option>
+                    <option value="event">Dîner</option>
+                    <option value="event">Appel</option>
+                    <option value="event">Café</option>
+                    <option value="event">FaceTime</option>
+                    <option value="event">Réunion</option>
+                    <option value="event">Visioconférence</option>
+                    <option value="event">To Do List</option>
+                </select>
+            </div>
+
+            <div class="contacts">
+                <i class="material-icons">contacts</i>
+                <label for="contacts">Contacts</label>
+                <input type="text" name="contacts" id="contacts">
+            </div>
+
+            <div class="date">
+                <i class="material-icons">date_range</i>
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+            </div>
+
+            <div class="occupied">
+                <i class="material-icons">class</i>
+                <label for="allday">Durée</label>
+                <select name="duration" id="duration">
+                    <option value="allday">Journée entière</option>
+                    <option value="30mins">30 minutes</option>
+                    <option value="1hour">1 heure</option>
+                    <option value="2hours">2 heures</option>
+                    <option value="3hours">3 heures</option>
+                    <option value="4hours">4 heures</option>
+                </select>
+            </div>
+            
+            <div class="hour">
+                <div id="hour-title">
+                    <i class="material-icons">alarm</i>
+                    <label for="hours">Heures</label> 
+                </div>
+                
+                <div id="hours">
+        
+                    <label for="hour1">Heure de début</label>
+                    <input type="time" name="hour" id="hour">
+                    
+                    <label for="hour2">Heure de fin</label>
+                    <input type="time" name="hour" id="hour">
+                </div>
+                
+            </div>
+            
+            <div class="place">
+                <i class="material-icons">room</i>
+                <label for="place">Lieu</label>
+                <input type="text" name="place" id="place">
+            </div>
+
+            <div class="description">
+                <i class="material-icons">description</i>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="46" rows="10"></textarea> 
+            </div>
+            
+            <div class="state">
+                <div id="state-title">
+                    <i class="material-icons">accessibility</i>
+                    <label>Afficher en tant que : <label> 
+                </div>
+                
+                <div class="state-types">
+                    <div id="state1">
+                        <input type="radio" name="state" id="state">
+                        <label for="state">Occupé(e)</label> 
+                    </div>
+                    
+                    <div id="state2">
+                        <input type="radio" name="state" id="state">
+                        <label for="state">Disponible</label>
+                    </div>
+
+                    <div id="state3">
+                        <input type="radio" name="state" id="state">
+                        <label for="state">Provisoire</label>
+                    </div>
+
+                    <div id="state4">
+                        <input type="radio" name="state" id="state">
+                        <label for="state">Absent(e) du bureau</label>
+                    </div>
+
+                    <div id="state5">
+                        <input type="radio" name="state" id="state">
+                        <label for="state">Travaille ailleurs</label>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="frequency">
+                <i class="material-icons">assignment_late</i>
+                <label for="frequency">Fréquence</label>
+                <select name="frequency" id="frequency">
+                    <option value="never">Jamais</option>
+                    <option value="dayly">Tous les jours</option>
+                    <option value="weekly">Toutes les semaines</option>
+                    <option value="monthly">Tous les mois</option>
+                    <option value="yearly">Tous les ans</option>
+                </select>
+            </div>
+
+            <div class="alert">
+                <i class="material-icons">add_alert</i>
+                <label>Alerte</label>
+                <select name="alert" id="alert">
+                    <option value="none">Aucune</option>
+                    <option value="event-hour">A l'heure de l'événement</option>
+                    <option value="5minutes">5 minutes avant</option>
+                    <option value="15minutes">15 minutes avant</option>
+                    <option value="30minutes">30 minutes avant</option>
+                    <option value="1hour">1 heure avant</option>
+                    <option value="2hours">2 heures avant</option>
+                    <option value="1day">1 jour avant</option>
+                    <option value="1week">1 semaine avant</option>
+                </select>
+            </div>
+
+            <div class="end-btn">
+                <button id="btn-reset" type="reset" style="margin-right: 10px;">Annuler</button>
+                <button id="btn-agenda" type="submit" formaction="agenda.html">Retour vers l'agenda</button>
+            </div>
+
+        </form>
+
+        
+    </main>
+
+    <footer>
+        <p>Hélène WÜNSCHENDORFF, 2020.</p>
+    </footer>
+
+</body>
+</html>

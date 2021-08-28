@@ -1,0 +1,604 @@
+/* AGENDA */
+
+/* TITRES */
+h1{
+    font-family: 'Tinos', serif;
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:  rgb(173, 50, 70);
+}
+
+h2{
+    font-family: 'Tinos', serif;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: rgb(231, 36, 68);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h3{
+    font-family: 'Tinos', serif;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(231, 36, 68);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* agenda.html : structure générale */
+
+.container > div {
+    border: 1px solid #888;
+}
+
+main{
+    background: linear-gradient(to right, rgb(208, 230, 238), rgb(211, 211, 236), rgb(240, 201, 240));
+    padding-bottom: 10%;
+}
+
+  /* Header : Agenda */
+
+.agenda-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.agenda-header{
+    height: 40%;
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/10/07/59/background-5152727_960_720.jpg");
+    background-color: transparent;
+}
+
+.agenda-header label, .agenda-header input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.agenda-date{
+    margin-left: 15%;
+    padding-bottom: 2.5%;
+}
+
+/* Bouton de menu déroulant : dropdown */
+
+.dropbtn {
+    background-color: #9ed8da;
+    color:  rgb(238, 31, 66);
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color:rgb(104, 176, 243);
+}
+
+
+  /* AGENDA CONTENT */
+
+.agenda-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+  
+
+  /* Calendrier */
+
+.calendar{
+    width: 30%;
+    margin-left: 2.5%;
+    margin-right: 5%;
+}
+
+#calendar-title{
+    font-size: 25px;
+}
+
+.month {
+    /*padding: 70px 25px;*/
+    width: 180px;
+    height: 80px;
+    background: #9cecdc;
+    text-align: center;
+    margin-top: 40%;
+}
+  
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+  
+.month ul li {
+    color: rgb(245, 39, 73);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10%;
+}
+  
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+  
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+  
+.weekdays2{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 20%;
+}
+
+.weekdays2 p, .days p{
+    text-align: center;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    max-width: 20%;
+    max-height: 20%;
+    line-height: 10%;
+    margin-top: 10%;
+}
+
+.days a{
+    text-decoration: none;
+}
+ 
+.days a p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* AGENDA */
+
+  /* Planning */
+
+.planning{
+    margin-left: -25px;
+}
+
+.planning h2{
+    margin-left: 15%;
+}
+
+#planning-photo img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+#planning-photo img:hover{
+    width: 300px;
+}
+
+.planning-header{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+    /*margin-left: 2.5%;*/
+    width: 60em;
+    background: linear-gradient(to right, white, pink, lightblue, rgb(151, 151, 224), rgb(161, 231, 161));
+}
+
+/* Planning : Tableau */
+
+.planning-table{
+    width: 100%;
+    border: 1px black solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead tr, tr td{
+    height: 30px;
+    width: 75px;
+    text-align: center;
+}
+
+thead tr th, tbody tr th{
+    width: 75px;
+    height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: blue;
+    font-weight: bold;
+}
+
+thead tr, tbody tr{
+    border: 1px black solid;
+}
+
+thead tr th, tbody tr td{
+    border: 1px black solid;
+}
+
+tbody tr td:nth-child(n){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    height: 35px;
+}
+
+#job-event{
+    width: 15%;
+   background-color: rgb(159, 241, 159);
+}
+
+#formation{
+    width: 20%;
+    background-color: rgb(250, 185, 196);
+}
+
+#travail-perso{
+    width: 20%;
+    background-color: rgb(111, 185, 245);
+}
+
+#mooc{
+    width: 20%;
+    background-color:rgb(194, 135, 250);
+}
+
+/* Récapitulatif des événements */
+
+#date{
+    width: 10%;
+}
+
+#hour{
+    width: 10%;
+}
+
+#event {
+    text-align: start;
+    width: 70%;
+}
+
+.recap-events-table{
+    border: 1px black solid;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+  /* Notes */
+
+.notes{
+    margin-left: 10px;
+    margin-right: 0.5%;
+    width: 20%;
+}
+
+.notes-icons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.notes-icons a{
+    margin-bottom: 50%;
+    margin-top: 20%;
+}
+
+#new-event-icon:hover{
+    color:blueviolet;
+}
+
+#new-event-icon:active{
+    color: blue;
+}
+
+#new-event-icon{
+    content: "New event";
+}
+
+/* FORMULAIRE */
+
+.new-event-header{
+    height: 200px;
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/10/07/59/background-5152727_960_720.jpg");
+    background-color: transparent;
+}
+
+.new-event{
+    background: linear-gradient(to right, lightblue, rgb(190, 190, 243), rgb(245, 193, 202), rgb(243, 169, 243), rgb(159, 236, 159));
+}
+
+#primavera img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+#primavera img:hover{
+    width: 300px;
+}
+
+#primavera{
+    margin-top: 10px;
+}
+
+#btn-record, #btn-delete{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin-top: 30px;
+}
+
+#btn-record{
+    background-color: rgb(76, 167, 219);
+}
+
+#btn-delete{
+    margin-left: 10%;
+    background-color: rgba(70, 250, 64, 0.541);
+}
+
+#btn-record img, #btn-delete img{
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#btn-record p, #btn-delete p{
+    margin-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.new-event-buttons{
+    display: block;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-left: 28%;
+    margin-bottom: 2.5%;
+}
+
+#btn-record:hover, #btn-delete:hover{
+    background-color: rgb(243, 97, 122);
+}
+
+form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+form div i{
+    font-size: 30px; 
+    color: rgb(248, 105, 129);
+}
+
+.new-event{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title, .event, .contacts, .occupied, .date, .hour, .place, .description, 
+.state, .frequency, .alert{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title label{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.title input[type=text] {
+    width: 30%;
+    height: 30px;
+    margin-left: 30px;
+}
+
+.event label{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#event{
+    width: 30%;
+    height: 30px;
+}
+
+.contacts label{
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.contacts input[type=text], .date input[type=date], #duration{
+    width: 30%;
+    height: 30px;
+}
+
+.date label, .occupied label{
+    margin-left: 50px;
+    margin-right: 45px;
+}
+
+.hour{
+    margin-right: 12%;
+}
+
+#hour-title label{
+   margin-left: 35px;
+   margin-right: 50px; 
+}
+
+#hours{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 10px 10px;
+    grid-template-areas:
+    "label input"
+    "label input";
+}
+
+#hours input[type=time]{
+    text-align: center;
+    height: 30px;
+}
+
+.place label{
+    margin-left: 50px;
+    margin-right: 52px;
+}
+
+.place input[type=text]{
+    width: 30%;
+    height: 30px;
+}
+
+.description label{
+    margin-left: 35px;
+    margin-right: 32px;
+}
+
+.state{
+    display: flex;
+    flex-direction: row;
+    margin-left: 13%;
+}
+
+#state-title label{
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.state-types{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 10px 5px;
+    grid-template-areas:
+    "#state1 #state2"
+    "#state3 #state4";
+    margin-right: 16%;
+    margin-top: 20px;
+}
+
+.frequency label{
+    margin-left: 32px;
+    margin-right: 35px;
+}
+
+.alert label{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.frequency select, .alert select{
+    width: 30%;
+    height: 30px;
+}
+
+/* Boutons : Annuler, Retour vers l'agenda */
+
+#btn-reset, #btn-agenda{
+    width: 200px;
+    height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(177, 116, 233);
+    font-weight: bold;
+}
+
+#btn-agenda{
+    background-color: rgb(63, 240, 181);
+}
+
+#btn-reset:hover, #btn-agenda:hover{
+    background-color: rgb(243, 97, 122);
+}
+
+.end-btn{
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 2.5%;
+    margin-left: 40%;
+}
+
+/* FOOTER */
+
+footer p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}
+
+footer{
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-plant-flowers-background-design-backgroundpink-image_73306.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
